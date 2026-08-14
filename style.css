@@ -130,11 +130,61 @@ input:focus-visible {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.55) 100%),
-    url("https://upload.wikimedia.org/wikipedia/commons/d/d5/Gran_paella.jpg") center 62% / cover no-repeat;
-  filter: saturate(1.1) contrast(1.05);
+  overflow: hidden;
+  background: #1a1410;
   z-index: -1;
+}
+
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.55) 100%);
+  z-index: 2;
+}
+
+.hero-bg-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: saturate(1.1) contrast(1.05);
+  opacity: 0;
+  animation: hero-crossfade 24s infinite;
+}
+
+.hero-bg-slide:nth-child(1) {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/fd/A_bowl_of_tonkotsu_ramen_at_Ichiran_in_Tokyo_in_July_2026.jpg");
+  animation-delay: 0s;
+}
+.hero-bg-slide:nth-child(2) {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/d5/Gran_paella.jpg");
+  background-position: center 62%;
+  animation-delay: 4s;
+}
+.hero-bg-slide:nth-child(3) {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/0/08/Omakase_sushi_%E2%80%94_where_chef_brings_you_the_best_in_season%2C_piece_by_piece.jpg");
+  animation-delay: 8s;
+}
+.hero-bg-slide:nth-child(4) {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/fd/Moussaka_du_chef_%C3%A0_la_b%C3%A9chamel_gratin%C3%A9e_%28Du_Conseil_%C3%A0_l%27assiette%29_septembre_2021.jpg");
+  animation-delay: 12s;
+}
+.hero-bg-slide:nth-child(5) {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/7f/Potstickers_with_sauce_-_Massachusetts.jpg");
+  animation-delay: 16s;
+}
+.hero-bg-slide:nth-child(6) {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/d6/Hummus_plate.jpg");
+  animation-delay: 20s;
+}
+
+@keyframes hero-crossfade {
+  0% { opacity: 0; }
+  4% { opacity: 1; }
+  14% { opacity: 1; }
+  20% { opacity: 0; }
+  100% { opacity: 0; }
 }
 
 .hero-eyebrow {
@@ -446,10 +496,20 @@ input:focus-visible {
 }
 
 .spotlight-photo {
-  border-radius: 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.spotlight-photo-item {
+  border-radius: 22px;
   overflow: hidden;
   box-shadow: var(--shadow);
-  aspect-ratio: 5 / 4;
+  aspect-ratio: 3 / 4;
+}
+
+.spotlight-photo-item:first-child {
+  margin-top: 2rem;
 }
 
 .spotlight-photo img {
