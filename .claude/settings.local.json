@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -c app.js)",
+      "Bash(open *)",
+      "WebSearch",
+      "WebFetch(domain:commons.wikimedia.org)",
+      "Artifact",
+      "Bash(curl -s \"https://commons.wikimedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category:Pad_Thai&cmtype=file&cmlimit=100&format=json\" -A \"Mozilla/5.0 research\")",
+      "Bash(python3 -c ' *)",
+      "Bash(cat)",
+      "Bash(chmod +x fetchcat.sh)",
+      "Bash(chmod +x getinfo.sh)",
+      "Bash(./fetchcat.sh \"Category:Kung Pao chicken\")",
+      "Bash(./fetchcat.sh \"Category:Shoyu ramen\")",
+      "Bash(./fetchcat.sh \"Category:Ramen\")",
+      "Bash(./fetchcat.sh \"Category:Tonkotsu-ramen\")",
+      "Bash(./fetchcat.sh \"Category:Miso ramen\")",
+      "Bash(./fetchcat.sh \"Category:Bibimbap\")",
+      "Bash(./fetchcat.sh \"Category:Phở\")",
+      "Bash(./fetchcat.sh \"Category:Moussaka\")",
+      "Bash(curl -s -G \"https://commons.wikimedia.org/w/api.php\" --data-urlencode \"action=query\" --data-urlencode \"list=search\" --data-urlencode \"srsearch=moussaka\" --data-urlencode \"srnamespace=6\" --data-urlencode \"srlimit=40\" --data-urlencode \"format=json\" -A \"Mozilla/5.0\")",
+      "Bash(curl -s -G \"https://commons.wikimedia.org/w/api.php\" --data-urlencode \"action=query\" --data-urlencode \"list=search\" --data-urlencode \"srsearch=moussaka plate slice\" --data-urlencode \"srnamespace=6\" --data-urlencode \"srlimit=30\" --data-urlencode \"format=json\" -A \"Mozilla/5.0\")",
+      "Bash(curl -s -G \"https://commons.wikimedia.org/w/api.php\" --data-urlencode \"action=query\" --data-urlencode \"list=search\" --data-urlencode \"srsearch=seafood paella\" --data-urlencode \"srnamespace=6\" --data-urlencode \"srlimit=30\" --data-urlencode \"format=json\" -A \"Mozilla/5.0\")",
+      "Bash(curl -s -G \"https://commons.wikimedia.org/w/api.php\" --data-urlencode \"action=query\" --data-urlencode \"list=search\" --data-urlencode \"srsearch=hummus plate\" --data-urlencode \"srnamespace=6\" --data-urlencode \"srlimit=30\" --data-urlencode \"format=json\" -A \"Mozilla/5.0\")",
+      "Bash(curl -s -G \"https://commons.wikimedia.org/w/api.php\" --data-urlencode \"action=query\" --data-urlencode \"list=search\" --data-urlencode \"srsearch=greek salad feta\" --data-urlencode \"srnamespace=6\" --data-urlencode \"srlimit=30\" --data-urlencode \"format=json\" -A \"Mozilla/5.0\")",
+      "Bash(curl -s -G \"https://commons.wikimedia.org/w/api.php\" --data-urlencode \"action=query\" --data-urlencode \"list=search\" --data-urlencode \"srsearch=shakshuka skillet\" --data-urlencode \"srnamespace=6\" --data-urlencode \"srlimit=30\" --data-urlencode \"format=json\" -A \"Mozilla/5.0\")",
+      "Bash(curl -s -G \"https://commons.wikimedia.org/w/api.php\" --data-urlencode \"action=query\" --data-urlencode \"list=search\" --data-urlencode \"srsearch=souvlaki chicken\" --data-urlencode \"srnamespace=6\" --data-urlencode \"srlimit=30\" --data-urlencode \"format=json\" -A \"Mozilla/5.0\" -o out.json)",
+      "Bash(curl -s -G \"https://commons.wikimedia.org/w/api.php\" --data-urlencode \"action=query\" --data-urlencode \"list=search\" --data-urlencode \"srsearch=pork chive dumplings jiaozi\" --data-urlencode \"srnamespace=6\" --data-urlencode \"srlimit=30\" --data-urlencode \"format=json\" -A \"Mozilla/5.0\" -o out.json)",
+      "Bash(curl -s -G \"https://commons.wikimedia.org/w/api.php\" --data-urlencode \"action=query\" --data-urlencode \"list=search\" --data-urlencode \"srsearch=jiaozi dumplings plate\" --data-urlencode \"srnamespace=6\" --data-urlencode \"srlimit=30\" --data-urlencode \"format=json\" -A \"Mozilla/5.0\" -o out.json)",
+      "Bash(curl -s -G \"https://commons.wikimedia.org/w/api.php\" --data-urlencode \"action=query\" --data-urlencode \"list=search\" --data-urlencode \"srsearch=wok cooking chef flame stir fry\" --data-urlencode \"srnamespace=6\" --data-urlencode \"srlimit=30\" --data-urlencode \"format=json\" -A \"Mozilla/5.0\" -o out.json)",
+      "Bash(curl -s -G \"https://commons.wikimedia.org/w/api.php\" --data-urlencode \"action=query\" --data-urlencode \"list=search\" --data-urlencode \"srsearch=sushi chef making rolls\" --data-urlencode \"srnamespace=6\" --data-urlencode \"srlimit=25\" --data-urlencode \"format=json\" -A \"Mozilla/5.0\" -o out.json)"
+    ]
+  }
+}

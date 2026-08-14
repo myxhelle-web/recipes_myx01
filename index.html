@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Recipe Secrets — Asian &amp; Mediterranean Cooking</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-mark">Recipe Secrets</div>
+  <ul class="nav-links">
+    <li><a href="#grid" data-nav-cuisine="all">All Recipes</a></li>
+    <li><a href="#grid" data-nav-cuisine="asian">Asian</a></li>
+    <li><a href="#grid" data-nav-cuisine="mediterranean">Mediterranean</a></li>
+    <li><a href="#classes">Classes</a></li>
+    <li><a href="#search" data-nav-focus-search="true">Search</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg"></div>
+  <p class="hero-eyebrow">A collection worth keeping</p>
+  <h1>Recipe Secrets.</h1>
+  <p>The dishes of Asia and the Mediterranean, made approachable — one recipe at a time.</p>
+  <div class="hero-actions">
+    <a class="btn btn-primary" href="#grid">Browse recipes</a>
+  </div>
+</header>
+
+<section class="filter-section" id="grid">
+  <h2>Find your next dish.</h2>
+  <p class="sub">Filter by cuisine and difficulty, or search by ingredient.</p>
+
+  <div class="segmented" role="group" aria-label="Filter by cuisine">
+    <button class="active" data-cuisine="all">All</button>
+    <button data-cuisine="asian">Asian</button>
+    <button data-cuisine="mediterranean">Mediterranean</button>
+  </div>
+
+  <div class="segmented" role="group" aria-label="Filter by difficulty">
+    <button class="active" data-difficulty="all">Any difficulty</button>
+    <button data-difficulty="Easy">Easy</button>
+    <button data-difficulty="Medium">Medium</button>
+    <button data-difficulty="Hard">Hard</button>
+  </div>
+
+  <input
+    type="search"
+    id="search-input"
+    placeholder="Search recipes, ingredients, cuisine..."
+    aria-label="Search recipes"
+  />
+</section>
+
+<p id="result-count" class="result-count"></p>
+
+<section id="recipe-grid" class="grid-section"></section>
+
+<p id="empty-state" class="empty-state" hidden>No recipes match your search. Try a different keyword or filter.</p>
+
+<section class="spotlight" id="spotlight">
+  <div class="spotlight-inner">
+    <div class="spotlight-text">
+      <p class="eyebrow">Every recipe</p>
+      <h2>Ingredients and method, at a glance.</h2>
+      <p>Tap any dish to open a clean, focused view — ingredients and steps laid out simply, no scrolling past ads or life stories to get to the point.</p>
+    </div>
+    <div class="spotlight-photo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Moussaka_du_chef_%C3%A0_la_b%C3%A9chamel_gratin%C3%A9e_%28Du_Conseil_%C3%A0_l%27assiette%29_septembre_2021.jpg" alt="Moussaka" />
+    </div>
+  </div>
+</section>
+
+<section class="classes-section" id="classes">
+  <p class="eyebrow">Learn hands-on</p>
+  <h2>Cooking classes.</h2>
+  <p class="sub">Small-group sessions led by our chefs — book a seat below.</p>
+  <div id="classes-grid" class="grid-section"></div>
+</section>
+
+<div id="recipe-modal" class="modal" hidden>
+  <div class="modal-overlay" data-close="true"></div>
+  <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" data-close="true" aria-label="Close">&times;</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<div id="booking-modal" class="modal" hidden>
+  <div class="modal-overlay" data-close="true"></div>
+  <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="booking-title">
+    <button class="modal-close" data-close="true" aria-label="Close">&times;</button>
+    <div id="booking-body"></div>
+  </div>
+</div>
+
+<footer class="footer">
+  <nav>
+    <a href="#grid" data-nav-cuisine="asian">Asian</a>
+    <a href="#grid" data-nav-cuisine="mediterranean">Mediterranean</a>
+    <a href="#classes">Classes</a>
+  </nav>
+  <p>Recipe Secrets &mdash; recipes best kept, then shared.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
